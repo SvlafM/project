@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Результаты поиска</title>
+</head>
+<body>
+    <h1>Результаты поиска</h1>
+    <form action="/" method="POST">
+        <input type="text" name="query" placeholder="Введите запрос" value="{{ query }}">
+        <br>
+        <input type="checkbox" name="translate_query" value="1"> Перевести запрос
+        <br>
+        <input type="text" name="title_filter" placeholder="Фильтр по названию" value="{{ query_params.title_filter }}">
+        <input type="text" name="authors_filter" placeholder="Фильтр по авторам" value="{{ query_params.authors_filter }}">
+        <input type="text" name="date_filter" placeholder="Фильтр по дате публикации" value="{{ query_params.date_filter }}">
+        <input type="text" name="citations_filter" placeholder="Фильтр по цитированию" value="{{ query_params.citations_filter }}">
+        <br>
+        <input type="submit" value="Поиск">
+    </form>
+    <ul>
+        {% for result in results %}
+            <li><a href="{{ result[0] }}">{{ result[1] }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

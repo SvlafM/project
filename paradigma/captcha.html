@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Капча</title>
+</head>
+<body>
+    <h1>Проверка капчи</h1>
+    <form action="/captcha" method="POST">
+        <p>Решите пример: 2 + 2 = ?</p>
+        <input type="text" name="answer" placeholder="Введите ответ">
+        <br>
+        <input type="submit" value="Проверить">
+        {% if message %}
+            <p>{{ message }}</p>
+        {% endif %}
+    </form>
+</body>
+</html>

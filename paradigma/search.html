@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Поиск</title>
+</head>
+<body>
+    <h1>Поиск</h1>
+    <form action="/" method="POST">
+        <input type="text" name="query" placeholder="Введите запрос">
+        <br>
+        <input type="checkbox" name="translate_query" value="1"> Перевести запрос
+        <br>
+        <input type="text" name="title_filter" placeholder="Фильтр по названию">
+        <input type="text" name="authors_filter" placeholder="Фильтр по авторам">
+        <input type="text" name="date_filter" placeholder="Фильтр по дате публикации">
+        <input type="text" name="citations_filter" placeholder="Фильтр по цитированию">
+        <br>
+        <input type="submit" value="Поиск">
+    </form>
+</body>
+</html>
